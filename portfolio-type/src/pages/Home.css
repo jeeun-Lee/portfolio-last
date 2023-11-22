@@ -1,0 +1,107 @@
+.Wrapper{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.svg-wrap{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    z-index: 1
+}
+svg{
+    display: block;   
+   
+}
+.waveBox{
+    background-color: #ddd;
+    height: 400px;
+}
+.title{
+    position: relative;
+    font-size: 150px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 100px;
+    z-index: 99;
+
+}
+.title span{
+    display: block;
+    color: #ddd;
+    animation: text-color 2s 1s both;
+  
+}
+.card-wrap{
+    position: fixed;
+    top: 150px;
+    right: 150px;
+    z-index: 9999;
+}
+.card{
+   position: relative;
+    width: 300px;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    z-index: 10;
+    background-color: rgba(255,255,255,1);
+    animation: opacity 2s 1s both, rotate 2s 2.5s alternate infinite;
+    padding: 20px;
+    word-break: keep-all
+}
+.card p{
+    text-align: center;
+}
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+@keyframes text-color{
+    0%{
+        color: #ddd;
+    }
+    100%{
+        color: #111;
+    }
+}
+@keyframes jello-vertical {
+    0% {
+        opacity: 0;
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        opacity: 1;
+         transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+  }
