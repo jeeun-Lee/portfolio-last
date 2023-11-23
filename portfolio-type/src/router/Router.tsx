@@ -7,7 +7,7 @@ import ErrorComponents from '../components/ErrorComponents';
 
 const router = createBrowserRouter([
     {
-        path :"/",
+        path :"/portfolio-last",
         element : <App />,
         children : [
             {
