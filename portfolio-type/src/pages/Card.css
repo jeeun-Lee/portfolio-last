@@ -1,0 +1,66 @@
+.card-wrap{
+    position: fixed;
+    top: 150px;
+    right: 150px;
+    z-index: 9999;
+}
+.card{
+   position: relative;
+    width: 300px;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    z-index: 10;
+    background-color: rgba(255,255,255,1);
+    animation: opacity 2s 1s both;
+    padding: 20px;
+    word-break: keep-all
+}
+
+.Pic-wrap{
+    width: 100%;
+    
+}
+.Pic-wrap img{
+    display: block;
+    max-width: 300px;
+}
+p{
+    margin-top: 30px;
+    text-align: center;
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes jello-vertical {
+    0% {
+        opacity: 0;
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        opacity: 1;
+         transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+  }
