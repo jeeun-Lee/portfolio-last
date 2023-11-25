@@ -7,6 +7,7 @@ import "./Home.css";
 import { Default, Desktop, Mobile, Tablet } from "../media";
 import Skill from "./Skill";
 import Card from "./Card";
+import Project from "./Project";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -54,7 +55,7 @@ function Home() {
                 </div>
             </section>
            <Skill />
-
+            <Project />
         </div>
     )
 }
