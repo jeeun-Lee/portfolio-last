@@ -26,7 +26,7 @@ function Card({x,y} : {x:number; y:number}){
                 잘 부탁드립니다!
             </p>    
         </div> 
-        <Circle style={{left: `${(x)/(-15)}px`, top: `${(y)/(-15)}px`}} />
+        <Circle style={{left: `${(x)/(-35)}px`, top: `${(y)/(-35)}px`}} />
     </div>
 
     )

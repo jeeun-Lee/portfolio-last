@@ -14,10 +14,18 @@ function Project() {
             <Swiper 
              modules={[Navigation,Pagination,Scrollbar]}
             spaceBetween={50}
-            slidesPerView={2}
+            
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
+            breakpoints={{
+                1210: {
+                    slidesPerView : 3
+                },
+                768: {
+                    slidesPerView : 1
+                }
+            }}
            
             onSlideChange={() => console.log('slide change')}
             >
