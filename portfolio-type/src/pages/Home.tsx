@@ -46,9 +46,9 @@ function Home() {
        
     },[]);
     return (
-        <div>
+        <div onMouseMove={mouseMove}>
             <Card x= {xy.x} y = {xy.y}  />
-            <section onMouseMove={mouseMove}>
+            <section >
                 <div className="Wrapper">
                     <h1 className="hi">Hello</h1>
                     <h2 className="title">Welcome <span>Je protfolio</span></h2>
