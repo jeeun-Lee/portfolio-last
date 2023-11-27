@@ -48,10 +48,10 @@ function Home() {
     return (
         <div onMouseMove={mouseMove}>
             <Card x= {xy.x} y = {xy.y}  />
-            <section >
-                <div className="Wrapper">
-                    <h1 className="hi">Hello</h1>
-                    <h2 className="title">Welcome <span>Je protfolio</span></h2>
+            <section className="home">
+                <div className="wrap-1400">
+                    <h1 className="hi en">Hello</h1>
+                    <h2 className="title en">Welcome <span>Je protfolio</span></h2>
                 </div>
             </section>
            <Skill />

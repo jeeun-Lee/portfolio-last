@@ -1,0 +1,35 @@
+.Skill-wrap{
+    background-color: #ddd;
+}
+.Skill-wrap h1{
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+.skill-list h6{
+    font-size: 24px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 170px;
+   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.07);
+   margin-right: 10px;
+   text-align: center;
+}
+.skill-list h6 + ul>li{
+    margin:0 10px;
+    font-size: 18px;
+    color: #aaa;
+}
+.skill-list h6 + ul>li.check{
+    font-weight: bold;
+    color: #111;
+}
+.skill-list>li:not(:last-child){
+    margin-bottom: 30px;
+}
+.skill-list p{
+    
+    margin-left: 20px;
+    font-size: 18px;
+}
