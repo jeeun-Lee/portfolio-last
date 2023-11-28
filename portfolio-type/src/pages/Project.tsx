@@ -1,11 +1,9 @@
 import  { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 function Project() {
   
@@ -13,11 +11,11 @@ function Project() {
         <section className="project">
         <div className="wrap-1400">
             <Swiper 
-                modules={[Navigation,Pagination,Scrollbar]}
+                modules={[Navigation,Pagination]}
                 spaceBetween={50}
                 navigation
                 pagination={{ clickable: true }}
-                scrollbar={{ draggable: true }}
+                
                 breakpoints={{
                     1210: {
                         slidesPerView : 3

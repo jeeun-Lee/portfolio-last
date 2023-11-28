@@ -80,15 +80,9 @@ function Skill(){
                                 <div className="flex align-items-center">
                                     <h6 className="en">{item.skill}</h6>
                                     <ul  className="flex">
-                                        <li className={(item.level <= 100 && item.level > 70) ? "check" : "" }>
-                                        상
-                                        </li>
-                                        <li className={(item.level <= 70 && item.level >= 50) ? "check" : "" }>
-                                        중
-                                        </li>
-                                        <li className={(item.level < 50) ? "check" : "" }>
-                                        하
-                                        </li>
+                                        <li className={(item.level <= 100 && item.level > 70) ? "check" : "" }>상</li>
+                                        <li className={(item.level <= 70 && item.level >= 50) ? "check" : "" }>중</li>
+                                        <li className={(item.level < 50) ? "check" : "" }>하</li>
                                     </ul>
                                     <p>{item.opinion}</p>
                                 </div>
