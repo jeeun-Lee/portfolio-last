@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 function Project() {
-  
+   
     return(
         <section className="project">
         <div className="wrap-1400">
