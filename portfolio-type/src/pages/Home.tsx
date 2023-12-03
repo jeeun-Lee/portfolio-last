@@ -44,6 +44,19 @@ function Home() {
                 toggleActions: "play none reverse none"
             }
         })
+        gsap.to(".card-wrap",{
+            duration: 0.5,
+           display : "none",
+           opacity: 0,
+            scrollTrigger:{
+                trigger:".project",
+                markers:true,
+                start:"bottom 0%",
+                end: "bottom 0%",
+                
+                toggleActions: "play none reverse none"
+            }
+        })
        
     },[]);
     return (
