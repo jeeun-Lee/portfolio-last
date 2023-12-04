@@ -9,19 +9,23 @@ import Skill from "./Skill";
 import Card from "./Card";
 import Project from "./Project";
 import Info from './Info';
+
 gsap.registerPlugin(ScrollTrigger);
 
 
-
 function Home() {
+    // const [audio, setAudio] =  useState<number | undefined>(undefined);
+    // const getAudio = (offsetTop : number | undefined) => {
+    //     setAudio(offsetTop);
+    // }
+   
     const [xy,setXY]=useState({x:200,y:200});
     const mouseMove = (event : React.MouseEvent) =>{
         setXY({x: event.pageX, y : event.pageY})
     };
    
     useEffect(() => {
-
-
+       
         gsap.to("path", 2, {
             attr:{
              d:"M0 120 Q360 180 720 120 T 1440 120 V240 H0 Z"
@@ -51,10 +55,10 @@ function Home() {
             scrollTrigger:{
                 trigger:".project",
                 markers:true,
-                start:"bottom 0%",
-                end: "bottom 0%",
-                
-                toggleActions: "play none reverse none"
+                start: "70% top", 
+				end: "bottom center", 
+                scrub: true,
+                toggleActions: "play reset play reset"
             }
         })
        
@@ -70,7 +74,8 @@ function Home() {
             </section>
            <Skill />
             <Project />
-            <Info />
+            <Info  /> 
+            {/*  getAudio={getAudio} */}
         </div>
     )
 }

@@ -25,7 +25,7 @@ function Project() {
     },[])
 
     return(
-        <section className="project">
+        <section id="project">
         <div className="wrap-1400">
             <Swiper 
                 modules={[Navigation,Pagination]}
