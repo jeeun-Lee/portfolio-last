@@ -54,7 +54,7 @@ function Home() {
            opacity: 0,
             scrollTrigger:{
                 trigger:".project",
-                markers:true,
+                markers:false,
                 start: "70% top", 
 				end: "bottom center", 
                 scrub: true,
