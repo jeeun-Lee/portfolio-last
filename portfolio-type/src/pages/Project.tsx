@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useParams } from "react-router-dom";
 import img from "../assets/images/pr1.png";
-
+import "./Project.css";
 interface Projectprops {
     id : number,
     project_title : string,
@@ -48,7 +48,9 @@ function Project() {
                 >
                 {project?.map((item)=>(
                      <SwiperSlide  key={item.id}>
-                        <img src={process.env.PUBLIC_URL + `/images/pr${item.id}.png`} alt="" />
+                        <div className="img-wrap">
+                            <img src={process.env.PUBLIC_URL + `/images/pr${item.id}.png`} alt="" />
+                        </div>
                         <p>{item.project_title}</p>
                         <p>{item.type}</p>
                         <p>{item.detail}</p>
