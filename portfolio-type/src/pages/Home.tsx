@@ -49,16 +49,15 @@ function Home() {
             }
         })
         gsap.to(".card-wrap",{
-            duration: 0.5,
+            duration: 0.1,
            display : "none",
            opacity: 0,
             scrollTrigger:{
-                trigger:".project",
-                markers:false,
-                start: "70% top", 
-				end: "bottom center", 
-                scrub: true,
-                toggleActions: "play reset play reset"
+                trigger:"#project",
+                markers:true,
+                start: "center center", 
+				end: "60% center",   
+                toggleActions: "restart none reverse reverse"
             }
         })
        

@@ -1,0 +1,13 @@
+#project .swiper-slide{
+    border: 1px solid #ddd;
+}
+#project .img-wrap{
+    max-width: 500px;
+    margin: 0 auto;
+}
+#project .img-wrap img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  
+}
