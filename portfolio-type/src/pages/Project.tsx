@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import { useParams } from "react-router-dom";
 import img from "../assets/images/pr1.png";
 import "./Project.css";
+import { relative } from "path";
 interface Projectprops {
     id : number,
     project_title : string,
@@ -28,16 +29,22 @@ function Project() {
     return(
         <section id="project">
            
-        <div className="wrap-1400">
-            <Swiper 
+        <div className="wrap-1400" style={{position:"relative"}}>
+            <Swiper
                 modules={[Navigation,Pagination]}
-                spaceBetween={50}
-                navigation
-                pagination={{ clickable: true }}
-                
+                simulateTouch={false}
+                spaceBetween={20}
+                navigation={{
+                    prevEl:".swiper-button-prev",
+                    nextEl: ".swiper-button-next"
+                }}
+                pagination={{
+                    el : ".pagin",
+                    dynamicBullets: true
+                  }}
                 breakpoints={{
                     1210: {
-                        slidesPerView : 3
+                        slidesPerView :3
                     },
                     768: {
                         slidesPerView : 1
@@ -58,8 +65,14 @@ function Project() {
                         <p>{item.url}</p>
                      </SwiperSlide>
                 ))}
+              
                
                 </Swiper>
+                <div className="pagin swiper-pagination"></div>
+                <div className="swiper_btn_wrap">
+                    <div className="swiper-button-prev"></div>
+                    <div className="swiper-button-next"></div>
+                </div>
         </div>
             
         </section>

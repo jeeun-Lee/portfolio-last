@@ -14,18 +14,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function Home() {
-    // const [audio, setAudio] =  useState<number | undefined>(undefined);
-    // const getAudio = (offsetTop : number | undefined) => {
-    //     setAudio(offsetTop);
-    // }
-   
+
+   const [projectHeight,setProjectHeight] = useState<number| undefined>(undefined);
+    
     const [xy,setXY]=useState({x:200,y:200});
     const mouseMove = (event : React.MouseEvent) =>{
         setXY({x: event.pageX, y : event.pageY})
     };
-   
+    const El = document.getElementById("project");
+    const El_top = El?.offsetTop;
     useEffect(() => {
-       
+
+        setProjectHeight(El_top)
+
         gsap.to("path", 2, {
             attr:{
              d:"M0 120 Q360 180 720 120 T 1440 120 V240 H0 Z"
@@ -38,7 +39,7 @@ function Home() {
 
         gsap.to(".Skill",{
             duration: 1,
-        //    backgroundColor:"#fff",
+
             scrollTrigger:{
                 trigger:".Skill",
                // markers:true,
@@ -55,7 +56,7 @@ function Home() {
             scrollTrigger:{
                 trigger:"#project",
                 markers:true,
-                start: "center center", 
+                start:`${projectHeight}px center`, 
 				end: "60% center",   
                 toggleActions: "restart none reverse reverse"
             }
