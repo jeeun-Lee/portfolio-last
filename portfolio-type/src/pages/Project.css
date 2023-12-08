@@ -1,5 +1,6 @@
 #project .swiper-slide{
     border: 1px solid #ddd;
+    overflow: hidden;
 }
 #project .img-wrap{
     max-width: 500px;
@@ -10,4 +11,30 @@
     max-width: 100%;
     height: auto;
   
+}
+#project .swiper_btn_wrap{
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    width: 120px;
+    height: var(--swiper-navigation-size); 
+}
+.swiper-button-prev, .swiper-button-next{
+    color: #111;
+}
+#project .swiper-pagination-bullets-dynamic{
+    bottom: 32px;
+}
+#project .swiper-pagination-bullet-active{
+    background: #111;
+}
+#project .swiper_btn_wrap::after{
+    content: "";
+    width: 1px;
+    height: var(--swiper-navigation-size); 
+    background-color: #111;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 }
