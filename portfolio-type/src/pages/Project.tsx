@@ -1,7 +1,7 @@
 import  { useEffect, useRef, useState } from "react";
 import projectData from "../assets/ProjectDb";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay  } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -29,11 +29,14 @@ function Project() {
     return(
         <section id="project">
            
-        <div className="wrap-1400" style={{position:"relative"}}>
+        <div className="wrap-1400" style={{position:"relative",maxWidth:"1500px"}}>
             <Swiper
-                modules={[Navigation,Pagination]}
-                simulateTouch={false}
-                spaceBetween={20}
+                modules={[Navigation,Pagination,Autoplay]}
+                spaceBetween={25}
+                speed={700}
+              //  autoplay={{ delay: 2000, disableOnInteraction: false  }}
+                loop
+                
                 navigation={{
                     prevEl:".swiper-button-prev",
                     nextEl: ".swiper-button-next"
@@ -44,7 +47,7 @@ function Project() {
                   }}
                 breakpoints={{
                     1210: {
-                        slidesPerView :3
+                        slidesPerView :3.05
                     },
                     768: {
                         slidesPerView : 1
@@ -58,11 +61,14 @@ function Project() {
                         <div className="img-wrap">
                             <img src={process.env.PUBLIC_URL + `/images/pr${item.id}.png`} alt="" />
                         </div>
-                        <p>{item.project_title}</p>
-                        <p>{item.type}</p>
-                        <p>{item.detail}</p>
-                        <p>{item.tag.map((tags,index)=>(<span key={index}>{tags} </span>))}</p>
-                        <p>{item.url}</p>
+                        <div className="txt-wrap">
+                            <h4 className="project_title">{item.project_title}</h4>
+                            <p className="txt_type">{item.type}</p>
+                            <p className="txt_detail">{item.detail}</p>
+                            <p className="txt_tags">{item.tag.map((tags,index)=>(<span className="en" key={index}>{tags} </span>))}</p>
+                            <p>{item.url}</p>
+                        </div>
+                    
                      </SwiperSlide>
                 ))}
               

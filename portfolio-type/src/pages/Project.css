@@ -1,6 +1,8 @@
 #project .swiper-slide{
     border: 1px solid #ddd;
+    background-color: #fff;
     overflow: hidden;
+    
 }
 #project .img-wrap{
     max-width: 500px;
@@ -37,4 +39,31 @@
     left: 50%;
     top: 0;
     transform: translateX(-50%);
+}
+#project .txt-wrap{
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+#project .txt-wrap .project_title{
+    font-size: 22px;
+    color: #808d2a;
+}
+#project .txt-wrap .txt_type{
+    font-size: 16px;
+    color: #7c7c7c;
+}
+#project .txt-wrap .txt_detail{
+    font-size: 18px;
+    word-break: keep-all;
+}
+
+#project .txt-wrap .txt_tags span{
+    color: #fff;
+    background-color: #7c7c7c;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 3px 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    margin-top: 10px;
 }
