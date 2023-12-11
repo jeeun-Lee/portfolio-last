@@ -35,7 +35,7 @@ function Skill(){
                      <WaveAni />
             </div>
             <div className="Skill-wrap">
-                <div className="wrap-1400">
+                <div className="wrap-1400" id="skill_position">
                     <h1 className="en">Skill Tool</h1>
                     <ul className="skill-list">
                     {
