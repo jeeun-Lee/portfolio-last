@@ -1,8 +1,17 @@
+#project .wrap-1400{
+    overflow: hidden;
+}
+#project .swiper{
+    overflow:visible
+}
 #project .swiper-slide{
     border: 1px solid #ddd;
     background-color: #fff;
     overflow: hidden;
-    
+    transition:transform .3s;
+}
+#project .swiper-slide:hover{
+    transform: translateY(-20px);
 }
 #project .img-wrap{
     max-width: 500px;
@@ -43,6 +52,7 @@
 #project .txt-wrap{
     padding: 15px;
     border-top: 1px solid #ddd;
+    min-height: 205px;
 }
 #project .txt-wrap .project_title{
     font-size: 22px;
@@ -51,6 +61,7 @@
 #project .txt-wrap .txt_type{
     font-size: 16px;
     color: #7c7c7c;
+    margin: 5px 0;
 }
 #project .txt-wrap .txt_detail{
     font-size: 18px;
@@ -62,8 +73,11 @@
     background-color: #7c7c7c;
     border-radius: 20px;
     display: inline-block;
-    padding: 3px 5px;
-    margin-right: 5px;
+    padding: 3px 10px;
+    
     font-size: 14px;
     margin-top: 10px;
+}
+#project .txt-wrap .txt_tags span:not(:last-child){
+    margin-right: 5px;
 }

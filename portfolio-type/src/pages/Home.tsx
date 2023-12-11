@@ -23,6 +23,8 @@ function Home() {
     };
     const El = document.getElementById("project");
     const El_top = El?.offsetTop;
+    const El_skill = document.getElementById("skill_position");
+    const El_skill_top = El_skill?.offsetTop;
     useEffect(() => {
 
         setProjectHeight(El_top)
@@ -49,16 +51,26 @@ function Home() {
                 toggleActions: "play none reverse none"
             }
         })
+        gsap.to(".card p",{
+            duration: 0.1,
+            color:"#ff0000",
+            scrollTrigger:{
+                trigger:"#skill_position",
+                markers:true,
+                start:`${El_skill_top}px center`, 
+                end: "60% center",   
+                toggleActions: "restart none none reverse"
+            }
+        })
         gsap.to(".card-wrap",{
             duration: 0.1,
            display : "none",
            opacity: 0,
             scrollTrigger:{
                 trigger:"#project",
-                markers:true,
                 start:`${projectHeight}px center`, 
 				end: "60% center",   
-                toggleActions: "restart none reverse reverse"
+                toggleActions: "restart none none reverse"
             }
         })
        
