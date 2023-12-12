@@ -41,7 +41,7 @@ function Home() {
 
         gsap.to(".Skill",{
             duration: 1,
-
+            
             scrollTrigger:{
                 trigger:".Skill",
                // markers:true,
@@ -51,15 +51,15 @@ function Home() {
                 toggleActions: "play none reverse none"
             }
         })
-        gsap.to(".card p",{
+        gsap.to(".card",{
             duration: 0.1,
-            color:"#ff0000",
             scrollTrigger:{
                 trigger:"#skill_position",
                 markers:true,
                 start:`${El_skill_top}px center`, 
-                end: "60% center",   
-                toggleActions: "restart none none reverse"
+                end: "110% center",   
+                toggleActions: "restart none none restart",
+                toggleClass:{targets:'.card',className:'card-active'}
             }
         })
         gsap.to(".card-wrap",{
