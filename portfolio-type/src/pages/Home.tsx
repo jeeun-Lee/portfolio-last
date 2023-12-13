@@ -29,22 +29,12 @@ function Home() {
     const El_top = El?.offsetTop;
     const El_skill = document.getElementById("skill_position");
     const El_skill_top = El_skill?.offsetTop;
-  //  const list_el = document.querySelectorAll(".list");
-  const reveal: HTMLElement[] = gsap.utils.toArray(".list");
+
   useEffect(() => {
     AOS.init();
 
       setProjectHeight(El_top)
-      
-      reveal.forEach((item: HTMLElement) => {
-        gsap.fromTo(item, { opacity: 0 }, {
-            scrollTrigger: {
-                trigger: item,
-                markers: true
-            }
-        });
-    });
-      
+
         gsap.to("path", 2, {
             attr:{
              d:"M0 120 Q360 180 720 120 T 1440 120 V240 H0 Z"
