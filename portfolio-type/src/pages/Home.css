@@ -79,3 +79,33 @@ svg{
     }
 }
 
+.info-title{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 10;
+}
+.info-title::after{
+    content: "Thank you";
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: -1;
+}
+.info-title.active::after{
+    animation: text-trans .2s both;
+}
+@keyframes text-trans{
+    0%{
+        top: 0px;
+        left: 50%;
+    }
+    100%{
+        top: 5px;
+        left: 51%;
+    }
+}

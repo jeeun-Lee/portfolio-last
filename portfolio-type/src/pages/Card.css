@@ -27,7 +27,7 @@
 }
 .Pic-wrap{
     width: 100%;
-    
+    z-index: 10;
 }
 .Pic-wrap img{
     display: block;
@@ -49,11 +49,9 @@
 
 @keyframes jello-vertical {
     0% {
-        opacity: 0;
         transform: scale3d(1, 1, 1);
     }
     30% {
-        opacity: 1;
          transform: scale3d(0.75, 1.25, 1);
     }
     40% {
