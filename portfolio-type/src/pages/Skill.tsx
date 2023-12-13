@@ -40,7 +40,7 @@ function Skill(){
                     <ul className="skill-list">
                     {
                         Skill.map((item:skillprops)=>(
-                            <li key={item.id}>
+                            <li key={item.id} data-aos="fade-up">
                                 <div className="flex align-items-center">
                                     <h6 className="en">{item.skill}</h6>
                                     <ul  className="flex">

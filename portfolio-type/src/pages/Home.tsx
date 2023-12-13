@@ -1,8 +1,12 @@
 
 import {styled,keyframes} from "styled-components";
 import {gsap} from "gsap";
+
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import "./Home.css";
 import { Default, Desktop, Mobile, Tablet } from "../media";
 import Skill from "./Skill";
@@ -25,10 +29,22 @@ function Home() {
     const El_top = El?.offsetTop;
     const El_skill = document.getElementById("skill_position");
     const El_skill_top = El_skill?.offsetTop;
-    useEffect(() => {
+  //  const list_el = document.querySelectorAll(".list");
+  const reveal: HTMLElement[] = gsap.utils.toArray(".list");
+  useEffect(() => {
+    AOS.init();
 
-        setProjectHeight(El_top)
-
+      setProjectHeight(El_top)
+      
+      reveal.forEach((item: HTMLElement) => {
+        gsap.fromTo(item, { opacity: 0 }, {
+            scrollTrigger: {
+                trigger: item,
+                markers: true
+            }
+        });
+    });
+      
         gsap.to("path", 2, {
             attr:{
              d:"M0 120 Q360 180 720 120 T 1440 120 V240 H0 Z"
@@ -44,10 +60,8 @@ function Home() {
             
             scrollTrigger:{
                 trigger:".Skill",
-               // markers:true,
                 start:"top 15%",
                 end: "top 30%",
-                
                 toggleActions: "play none reverse none"
             }
         })
@@ -55,7 +69,6 @@ function Home() {
             duration: 0.1,
             scrollTrigger:{
                 trigger:"#skill_position",
-                markers:true,
                 start:`${El_skill_top}px center`, 
                 end: "110% center",   
                 toggleActions: "restart none none restart",
@@ -73,7 +86,17 @@ function Home() {
                 toggleActions: "restart none none reverse"
             }
         })
-       
+        gsap.to(".info-title",{
+            duration: 0.1,
+            scrollTrigger:{
+            trigger:".info",
+                start:"top 15%",
+                end: "bottom 30%",
+                toggleActions: "play none reverse none",
+                toggleClass:{targets:'.info-title', className:'active'},
+            }
+        })
+    
     },[]);
     return (
         <div onMouseMove={mouseMove}>
@@ -87,7 +110,6 @@ function Home() {
            <Skill />
             <Project />
             <Info  /> 
-            {/*  getAudio={getAudio} */}
         </div>
     )
 }
