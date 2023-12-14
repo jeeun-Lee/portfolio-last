@@ -1,111 +1,156 @@
-section.Home{
-    margin-top: 100px;
-}
-.wrap-1400{
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 100px 0;
-}
-.flex{
-    display: flex;
-}
-.align-items-center{
-    align-items: center;
-}
-.home .wrap-1400 {
-    padding-bottom: 0;
-}
-.svg-wrap{
-    position: relative;
-    left:0;
-    z-index: 1;
 
-}
-svg{
-    display: block;   
-   
-}
-.waveBox{
-    background-color: #ddd;
-    height: 500px;
-}
-.hi{
-    font-size: 150px;
-    position: relative;
-    width: fit-content;
-}
-.hi::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #BCD041;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: width-0 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-.title{
-    position: relative;
-    font-size: 150px;
-    
-    z-index: 99;
-
-}
-.title span{
-    display: block;
-    position: relative;
-    width: fit-content;
-}
-.title span::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #BCD041;
-    position: absolute;
-    top: 0;
-    right: 0;
-    animation: width-0 0.5s 0.3s  cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-   
-}
-
-@keyframes width-0{
-    0%{
+    section.Home{
+        margin-top: 100px;
+    }
+    .wrap-1400{
         width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 100px 0;
     }
-    100%{
-        width: 0;
+    .flex{
+        display: flex;
     }
-}
+    .align-items-center{
+        align-items: center;
+    }
+    .home .wrap-1400 {
+        padding-bottom: 0;
+    }
+    .svg-wrap{
+        position: relative;
+        left:0;
+        z-index: 1;
 
-.info-title{
-    position: relative;
-    width: fit-content;
-    margin: 0 auto;
-    z-index: 10;
-}
-.info-title::after{
-    content: "Thank you";
-    color: #fff;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    width: 100%;
-    z-index: -1;
-}
-.info-title.active::after{
-    animation: text-trans .2s both;
-}
-@keyframes text-trans{
-    0%{
+    }
+    svg{
+        display: block;   
+    
+    }
+    .waveBox{
+        background-color: #ddd;
+        height: 500px;
+    }
+    .hi{
+        font-size: 150px;
+        position: relative;
+        width: fit-content;
+    }
+    .hi::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #BCD041;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: width-0 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    .title{
+        position: relative;
+        font-size: 150px;
+        
+        z-index: 99;
+
+    }
+    .title span{
+        display: block;
+        position: relative;
+        width: fit-content;
+    }
+    .title span::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #BCD041;
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation: width-0 0.5s 0.3s  cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    
+    }
+
+    .info-title{
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+        z-index: 10;
+    }
+    .info-title::after{
+        content: "Thank you";
+        color: #fff;
+        position: absolute;
         top: 0px;
         left: 50%;
+        text-align: center;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: -1;
     }
-    100%{
-        top: 5px;
-        left: 51%;
+    .info-title.active::after{
+        animation: text-trans .2s both;
+    }
+    .info-title span{
+        display: inline-block;
+    }
+    .info-title span.active{
+        animation: shake-bottom 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
+    }
+
+    @keyframes width-0{
+        0%{
+            width: 100%;
+        }
+        100%{
+            width: 0;
+        }
+    }
+
+    @keyframes text-trans{
+        0%{
+            top: 0px;
+            left: 50%;
+        }
+        100%{
+            top: 5px;
+            left: 51%;
+        }
+    }
+    @keyframes shake-bottom {
+        0%,
+        100% {
+                transform: rotate(0deg);
+                transform-origin: 50% 100%;
+        }
+        10% {
+                transform: rotate(2deg);
+        }
+        20%,
+        40%,
+        60% {
+                transform: rotate(-4deg);
+        }
+        30%,
+        50%,
+        70% {
+                transform: rotate(4deg);
+        }
+        80% {
+                transform: rotate(-2deg);
+        }
+        90% {
+                transform: rotate(2deg);
+        }
+    }
+@media(max-width:1400px){
+    .wrap-1400{
+        padding: 100px 20px;
+    }
+    .hi,.title{
+        font-size: 12vw;
+    }
+    .home .wrap-1400{
+        padding-top: 70px;
     }
 }

@@ -62,7 +62,8 @@ function Home() {
                 start:`${El_skill_top}px center`, 
                 end: "110% center",   
                 toggleActions: "restart none none restart",
-                toggleClass:{targets:'.card',className:'card-active'}
+                toggleClass:{targets:'.card',className:'card-active'},
+                
             }
         })
         gsap.to(".card-wrap",{
@@ -76,20 +77,20 @@ function Home() {
                 toggleActions: "restart none none reverse"
             }
         })
-        gsap.to(".info-title",{
+        gsap.to([".info-title",".info-title span"],{
             duration: 0.1,
             scrollTrigger:{
-            trigger:".info",
+                trigger:".info",
                 start:"top 15%",
                 end: "bottom 30%",
                 toggleActions: "play none reverse none",
-                toggleClass:{targets:'.info-title', className:'active'},
+                toggleClass:{className:'active', targets: ".info-title, .info-title span" },
             }
         })
     
     },[]);
     return (
-        <div onMouseMove={mouseMove}>
+         <div onMouseMove={mouseMove}>
             <Card x= {xy.x} y = {xy.y}  />
             <section className="home">
                 <div className="wrap-1400">
@@ -101,6 +102,7 @@ function Home() {
             <Project />
             <Info  /> 
         </div>
+       
     )
 }
 export default Home;

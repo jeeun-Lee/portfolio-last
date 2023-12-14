@@ -10,6 +10,9 @@ const Circle = styled.div`
     position: absolute;
     z-index:-1;
     animation:jello-vertical 1s 1s both infinite;
+    @media (max-width:1400px) {
+       display: none;
+    }
 `
 
 function Card({x,y} : {x:number; y:number}){
