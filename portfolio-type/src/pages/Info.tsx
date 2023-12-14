@@ -4,6 +4,9 @@ const Title = styled.div`
     width: 100%;
     font-size: 50px;
     text-align: center;
+    @media (max-width:768px) {
+        font-size: 10vw;
+    }
 `
 const P_text = styled.p`
     font-size: 18px;

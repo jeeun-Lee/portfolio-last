@@ -12,7 +12,7 @@ caption{display: none;}
     padding: 0;
     font-family: 'Noto sans KR',  sans-serif;
     color: #111;
-
+    box-sizing:border-box; 
 }
 html,body{
     overflow-x: hidden;
