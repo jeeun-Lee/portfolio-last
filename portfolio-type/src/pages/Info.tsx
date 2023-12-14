@@ -17,7 +17,7 @@ function Info() {
             <Title>
                 <h1 className="info-title en">
                 Thank you <br />
-                For Watching!
+                For <span>Watching!</span>
                 </h1>
             <P_text>
                 
