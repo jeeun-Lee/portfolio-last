@@ -95,3 +95,8 @@
       opacity: 1;
     }
   }
+  @media(max-width:768px){
+    #project .txt-wrap{
+        min-height: 274px;
+    }
+  }
