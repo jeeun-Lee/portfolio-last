@@ -77,14 +77,14 @@ function Home() {
                 toggleActions: "restart none none reverse"
             }
         })
-        gsap.to([".info-title",".info-title span"],{
+        gsap.to([".info-title",".info-title span.swing"],{
             duration: 0.1,
             scrollTrigger:{
                 trigger:".info",
                 start:"top 15%",
                 end: "bottom 30%",
                 toggleActions: "play none reverse none",
-                toggleClass:{className:'active', targets: ".info-title, .info-title span" },
+                toggleClass:{className:'active', targets: ".info-title, .info-title span.swing" },
             }
         })
     

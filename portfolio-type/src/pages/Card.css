@@ -6,8 +6,8 @@
 }
 .card{
    position: relative;
-    width: 300px;
-    height: 460px;
+    width: 330px;
+    min-height: 460px;
     border: 2px solid #ddd;
     border-radius: 20px;
     z-index: 10;
@@ -31,7 +31,7 @@
 }
 .Pic-wrap img{
     display: block;
-    max-width: 300px;
+    margin: 0 auto;
 }
 .card p{
     margin-top: 30px;
@@ -78,9 +78,10 @@
     }
     .card {
         width: 100px;
-        height: 100px;
         border-radius:50%;
         padding: 0;
+        min-height: auto;
+        height: 100px;
         overflow: hidden;
     }
     .Pic-wrap{

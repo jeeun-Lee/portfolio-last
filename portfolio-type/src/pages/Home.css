@@ -50,9 +50,7 @@
     .title{
         position: relative;
         font-size: 150px;
-        
-        z-index: 99;
-
+        z-index: 99
     }
     .title span{
         display: block;
@@ -77,8 +75,11 @@
         margin: 0 auto;
         z-index: 10;
     }
-    .info-title::after{
-        content: "Thank you";
+    .info-title .inText{
+        position: relative;
+    }
+    .info-title .inText::after{
+        content: attr(data-text);
         color: #fff;
         position: absolute;
         top: 0px;
@@ -88,13 +89,13 @@
         width: 100%;
         z-index: -1;
     }
-    .info-title.active::after{
+    .info-title.active .inText::after{
         animation: text-trans .2s both;
     }
-    .info-title span{
+    .info-title span.swing{
         display: inline-block;
     }
-    .info-title span.active{
+    .info-title span.swing.active{
         animation: shake-bottom 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
     }
 
@@ -144,6 +145,9 @@
         }
     }
 @media(max-width:1400px){
+    .home{
+        height: 80vh;
+    }
     .wrap-1400{
         padding: 100px 20px;
     }
