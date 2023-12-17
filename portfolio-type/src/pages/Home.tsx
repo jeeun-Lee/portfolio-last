@@ -18,23 +18,55 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function Home() {
-
-   const [projectHeight,setProjectHeight] = useState<number| undefined>(undefined);
+    const mq = window.matchMedia("(max-width:1400px)");
     
     const [xy,setXY]=useState({x:200,y:200});
     const mouseMove = (event : React.MouseEvent) =>{
         setXY({x: event.pageX, y : event.pageY})
     };
-    const El = document.getElementById("project");
-    const El_top = El?.offsetTop;
+
     const El_skill = document.getElementById("skill_position");
     const El_skill_top = El_skill?.offsetTop;
 
+
+    const El = document.getElementById("project");
+    const [projectHeight,setProjectHeight] = useState<number| undefined>(undefined);
+      
+    const reSize = () =>{
+        const El_top = El?.offsetTop;
+        setProjectHeight(El_top)
+
+        if(mq.matches){
+            gsap.to(".card-wrap",{
+                duration: 0.1,
+              visibility:"hidden",
+               opacity: 0,
+                scrollTrigger:{
+                    trigger:"#project",
+                    start:`${projectHeight}px 10%`, 
+                    end: "60% center",   
+                    toggleActions: "restart none none reverse",
+                    
+                }
+            })
+        }else{
+            gsap.to(".card-wrap",{
+                duration: 0.1,
+              visibility:"hidden",
+               opacity: 0,
+                scrollTrigger:{
+                    trigger:"#project",
+                    start:`${projectHeight}px center`, 
+                    end: "60% center",   
+                    toggleActions: "restart none none reverse",
+                    markers:true
+                }
+            })
+        }
+    }
   useEffect(() => {
     AOS.init();
-
-      setProjectHeight(El_top)
-
+    
         gsap.to("path", 2, {
             attr:{
              d:"M0 120 Q360 180 720 120 T 1440 120 V240 H0 Z"
@@ -66,17 +98,7 @@ function Home() {
                 
             }
         })
-        gsap.to(".card-wrap",{
-            duration: 0.1,
-           display : "none",
-           opacity: 0,
-            scrollTrigger:{
-                trigger:"#project",
-                start:`${projectHeight}px center`, 
-				end: "60% center",   
-                toggleActions: "restart none none reverse"
-            }
-        })
+      
         gsap.to([".info-title",".info-title span.swing"],{
             duration: 0.1,
             scrollTrigger:{
@@ -87,8 +109,14 @@ function Home() {
                 toggleClass:{className:'active', targets: ".info-title, .info-title span.swing" },
             }
         })
-    
-    },[]);
+        const handleResize = () => {
+            reSize();
+        };
+        window.addEventListener("resize", handleResize)
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [projectHeight]);
     return (
          <div onMouseMove={mouseMove}>
             <Card x= {xy.x} y = {xy.y}  />

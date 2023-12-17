@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { createElement, useEffect, useState } from "react";
+import { Default, Desktop, Mobile, Tablet } from "../media";
 import {styled,keyframes} from "styled-components";
 import my from "../assets/images/myPic.gif";
 import "./Card.css"
@@ -16,10 +17,16 @@ const Circle = styled.div`
 `
 
 function Card({x,y} : {x:number; y:number}){
-    
+    const [isClick,setIsClick] = useState(false);
+
+    const setClick = () =>{
+       setIsClick(!isClick);
+    }
+
     return(
+
         <div className="card-wrap">
-        <div className="card">
+        <div className={`card ${isClick? "clicked" : ""}`} onClick={setClick}>
             <div className="Pic-wrap">
                 <img src={my} alt="my" className="img-fluid" />
                 <p>
@@ -32,8 +39,9 @@ function Card({x,y} : {x:number; y:number}){
                     아직 부족하지만 꾸준히 발전 중입니다:D 
                 </p>    
             </div>
-           
-            <Circle style={{left: `${(x)/(-35)}px`, top: `${(y)/(-35)}px`}} />
+           <Desktop>
+                <Circle style={{left: `${(x)/(-35)}px`, top: `${(y)/(-35)}px`}} />
+           </Desktop>
         </div> 
     </div>
 

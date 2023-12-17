@@ -54,7 +54,6 @@ function Project() {
                     }
                 }}
             
-                onSlideChange={() => console.log('slide change')}
                 >
                 {project?.map((item)=>(
                      <SwiperSlide  key={item.id}>

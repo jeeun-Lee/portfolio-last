@@ -84,6 +84,9 @@
         height: 100px;
         overflow: hidden;
     }
+    .card.clicked{
+        
+    }
     .Pic-wrap{
         
         margin:0 auto;
