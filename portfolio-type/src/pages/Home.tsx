@@ -19,6 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
     const mq = window.matchMedia("(max-width:1400px)");
+    const mq_min = window.matchMedia("(min-width:1400px)");
     
     const [xy,setXY]=useState({x:200,y:200});
     const mouseMove = (event : React.MouseEvent) =>{
@@ -36,30 +37,29 @@ function Home() {
         const El_top = El?.offsetTop;
         setProjectHeight(El_top)
 
-        if(mq.matches){
+        if(mq.matches || !(mq_min.matches)){
             gsap.to(".card-wrap",{
                 duration: 0.1,
-              visibility:"hidden",
-               opacity: 0,
+                display:"none",
+                opacity: 0,
                 scrollTrigger:{
                     trigger:"#project",
                     start:`${projectHeight}px 10%`, 
                     end: "60% center",   
                     toggleActions: "restart none none reverse",
-                    
                 }
             })
         }else{
             gsap.to(".card-wrap",{
                 duration: 0.1,
-              visibility:"hidden",
-               opacity: 0,
+                display:"none",
+                opacity: 0,
                 scrollTrigger:{
                     trigger:"#project",
                     start:`${projectHeight}px center`, 
                     end: "60% center",   
                     toggleActions: "restart none none reverse",
-                    markers:true
+                    
                 }
             })
         }
@@ -112,11 +112,13 @@ function Home() {
         const handleResize = () => {
             reSize();
         };
+        window.addEventListener("load",handleResize)
         window.addEventListener("resize", handleResize)
         return () => {
+            window.removeEventListener("load",handleResize)
             window.removeEventListener("resize", handleResize);
         };
-    }, [projectHeight]);
+    },  [projectHeight, El_skill_top]);
     return (
          <div onMouseMove={mouseMove}>
             <Card x= {xy.x} y = {xy.y}  />

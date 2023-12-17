@@ -15,20 +15,46 @@ const Circle = styled.div`
        display: none;
     }
 `
+const ClickTextAni = keyframes`
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+`
+const ClickTextDiv = styled.div`
+    text-align: center;
+    background-color: #fff;
+    position: fixed;
+    top: 120px;
+    right: 10px;
+    width: 100px;
+    border-radius: 30px;
+    padding: 3px;
+    transition: .3s;
+    opacity: 0;
+    transform: translateY(10px);
+    &.clicked{
+        opacity: 1;
+        transform: translateY(0);
+    }
+`
 
 function Card({x,y} : {x:number; y:number}){
     const [isClick,setIsClick] = useState(false);
-
-    const setClick = () =>{
-       setIsClick(!isClick);
+    const Click = () =>{
+        setIsClick(!isClick)
     }
-
     return(
 
-        <div className="card-wrap">
-        <div className={`card ${isClick? "clicked" : ""}`} onClick={setClick}>
+        <div className="card-wrap" onClick={Click}>
+        <div className={`card`} >
             <div className="Pic-wrap">
                 <img src={my} alt="my" className="img-fluid" />
+              
                 <p>
                 안녕하세요~ :D 이제은이라고 합니다.<br />
                 이곳은 제가 가진 스킬과 그동안 작업했던 프로젝트들을 보여드리고 있습니다.<br /><br />
@@ -43,6 +69,9 @@ function Card({x,y} : {x:number; y:number}){
                 <Circle style={{left: `${(x)/(-35)}px`, top: `${(y)/(-35)}px`}} />
            </Desktop>
         </div> 
+        <Mobile>
+            <ClickTextDiv className={`en ${isClick ? "clicked" : ""}`}>HiHi</ClickTextDiv>
+        </Mobile>
     </div>
 
     )
