@@ -66,7 +66,7 @@ function Home() {
     }
   useEffect(() => {
     AOS.init();
-    
+        
         gsap.to("path", 2, {
             attr:{
              d:"M0 120 Q360 180 720 120 T 1440 120 V240 H0 Z"
@@ -92,10 +92,9 @@ function Home() {
             scrollTrigger:{
                 trigger:"#skill_position",
                 start:`${El_skill_top}px center`, 
-                end: "110% center",   
+                markers:true,
                 toggleActions: "restart none none restart",
                 toggleClass:{targets:'.card',className:'card-active'},
-                
             }
         })
       
