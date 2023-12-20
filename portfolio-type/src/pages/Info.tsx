@@ -11,8 +11,22 @@ const Title = styled.div`
 
 `
 
-const P_text = styled.p`
-    font-size: 18px;
+const Div_text = styled.div`
+    display: flex;
+
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    & a{
+        display: block;
+        width: 25px;
+        margin: 0 5px;
+    }
+    & a img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
 `
 
 function Info() {
@@ -36,11 +50,14 @@ function Info() {
                <span className="inText">Thank you</span>  <br />
                 For <span className="inText swing">Watching!</span>
                 </h1>
-            <P_text>
-                
-                    Github : <br />
-                    e-mail:
-            </P_text>
+            <Div_text>
+                <a href="https://github.com/jeeun-Lee" target="_blank">
+                    <img src={process.env.PUBLIC_URL + `/images/github.png`} alt="" />
+                </a>
+                <a href="mailto:batch402@gmail.com" target="_blank">
+                    <img src={process.env.PUBLIC_URL + `/images/email.png`} alt="" />
+                </a>
+            </Div_text>
             
             </Title>
            

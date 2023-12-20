@@ -60,7 +60,7 @@ function Project() {
                         <Link to={item.url} target="_blank">
                         
                         <div className="img-wrap">
-                            <img src={process.env.PUBLIC_URL + `/images/pr${item.id}.png`} alt="" />
+                            <img src={process.env.PUBLIC_URL + `/images/pr${item.id}.png`} alt={item.project_title} />
                         </div>
                         <div className="txt-wrap">
                             <h4 className="project_title">{item.project_title}</h4>
