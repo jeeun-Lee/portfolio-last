@@ -92,7 +92,7 @@ function Home() {
             scrollTrigger:{
                 trigger:"#skill_position",
                 start:`${El_skill_top}px center`, 
-                markers:true,
+                
                 toggleActions: "restart none none restart",
                 toggleClass:{targets:'.card',className:'card-active'},
             }

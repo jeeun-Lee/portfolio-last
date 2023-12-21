@@ -1,5 +1,6 @@
 import  { useEffect, useRef, useState } from "react";
 import projectData from "../assets/ProjectDb";
+import {styled,keyframes} from "styled-components";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay  } from 'swiper/modules';
 import 'swiper/css';
@@ -17,7 +18,10 @@ interface Projectprops {
     tag : string[],
     url : string
 }
-
+const Project_title = styled.h1`
+    font-size: 70px;
+    margin-bottom: 50px;
+`
 function Project() {
     const [project,setProject]= useState<Projectprops[]>()
     useEffect(() => {
@@ -30,6 +34,8 @@ function Project() {
         <section id="project">
            
         <div className="wrap-1400" style={{position:"relative"}}>
+            <Project_title className="en">Project</Project_title>
+        
             <Swiper
                 modules={[Navigation,Pagination,Autoplay]}
                 spaceBetween={35}
