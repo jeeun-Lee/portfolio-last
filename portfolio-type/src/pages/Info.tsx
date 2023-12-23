@@ -6,7 +6,7 @@ const Title = styled.div`
     font-size: 50px;
     text-align: center;
     @media (max-width:768px) {
-        font-size: 10vw;
+        font-size: 8vw;
     }
 
 `

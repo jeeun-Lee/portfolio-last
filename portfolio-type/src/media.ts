@@ -7,7 +7,7 @@ export const Desktop = ({children}: {children: JSX.Element}): JSX.Element | null
 };
 
 export const Tablet = ({children}: {children: JSX.Element}): JSX.Element | null => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1400 });
   return isTablet ? children : null;
 };
 

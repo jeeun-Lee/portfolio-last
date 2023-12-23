@@ -40,7 +40,7 @@ function Project() {
                 modules={[Navigation,Pagination,Autoplay]}
                 spaceBetween={35}
                 speed={700}
-              //  autoplay={{ delay: 2000, disableOnInteraction: false  }}
+                autoplay={{ delay: 2000, disableOnInteraction: false  }}
                 loop
                 
                 navigation={{
