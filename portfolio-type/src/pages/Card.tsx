@@ -32,6 +32,7 @@ const ClickTextDiv = styled.div`
     top: 120px;
     right: 10px;
     width: 100px;
+    border: 1px solid #ddd;
     border-radius: 30px;
     padding: 3px;
     transition: .3s;
@@ -69,9 +70,9 @@ function Card({x,y} : {x:number; y:number}){
                 <Circle style={{left: `${(x)/(-35)}px`, top: `${(y)/(-35)}px`}} />
            </Desktop>
         </div> 
-        <Mobile>
-            <ClickTextDiv className={`en ${isClick ? "clicked" : ""}`}>HiHi</ClickTextDiv>
-        </Mobile>
+            <Mobile>
+                <ClickTextDiv className={`en ${isClick ? "clicked" : ""}`}>HiHi</ClickTextDiv>
+            </Mobile>
     </div>
 
     )
