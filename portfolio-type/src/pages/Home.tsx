@@ -1,7 +1,7 @@
 
 import {styled,keyframes} from "styled-components";
 import {gsap} from "gsap";
-
+import Header from "../components/Header";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
@@ -18,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function Home() {
+    
     const mq = window.matchMedia("(max-width:1400px)");
     const mq_min = window.matchMedia("(min-width:1400px)");
     
@@ -33,6 +34,7 @@ function Home() {
     const El = document.getElementById("project");
     const [projectHeight,setProjectHeight] = useState<number| undefined>(undefined);
       
+
     const reSize = () =>{
         const El_top = El?.offsetTop;
         setProjectHeight(El_top)
@@ -119,7 +121,8 @@ function Home() {
         };
     },  [projectHeight, El_skill_top]);
     return (
-         <div onMouseMove={mouseMove}>
+        <div onMouseMove={mouseMove}>
+             <Header />
             <Card x= {xy.x} y = {xy.y}  />
             <section className="home">
                 <div className="wrap-1400">
