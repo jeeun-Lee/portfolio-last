@@ -10,12 +10,15 @@ const Header_box = styled.div`
         width: 100%;
         opacity: 1;
         background-color: #fff;
-        z-index: 999;
+        z-index: 99999;
         visibility: visible;
         &.hidden{
             transition: .3s;
             opacity: 0;
             visibility: hidden;
+        }
+        @media (max-width:768px) {
+            font-size: 14px;
         }
     `
 function Header(): JSX.Element {
