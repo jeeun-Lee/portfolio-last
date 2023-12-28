@@ -33,8 +33,12 @@
     width: 120px;
     height: var(--swiper-navigation-size); 
 }
+.swiper-button-prev{
+    left: var(--swiper-navigation-offset,0px);
+}
 .swiper-button-prev, .swiper-button-next{
     color: #111;
+    right: var(--swiper-navigation-offset,0px);
 }
 #project .swiper-pagination-bullets-dynamic{
     bottom: 32px;

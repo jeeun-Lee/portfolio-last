@@ -29,7 +29,7 @@ const ClickTextDiv = styled.div`
     text-align: center;
     background-color: #fff;
     position: fixed;
-    top: 120px;
+    top: 150px;
     right: 10px;
     width: 100px;
     border: 1px solid #ddd;
