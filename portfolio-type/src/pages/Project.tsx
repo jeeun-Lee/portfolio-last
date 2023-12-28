@@ -53,7 +53,7 @@ function Project() {
                   }}
                 breakpoints={{
                     1210: {
-                        slidesPerView :3.05
+                        slidesPerView :3.0
                     },
                     768: {
                         slidesPerView : 0.9

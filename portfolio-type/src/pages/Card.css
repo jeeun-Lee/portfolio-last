@@ -73,7 +73,7 @@
 
   @media(max-width:1400px){
     .card-wrap{
-        top: 10px;
+        top: 40px;
         right: 10px;
     }
     .card {
