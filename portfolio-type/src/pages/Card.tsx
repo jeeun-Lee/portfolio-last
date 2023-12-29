@@ -1,5 +1,6 @@
 import { createElement, useEffect, useState } from "react";
 import { Default, Desktop, Mobile, Tablet } from "../media";
+import Weather from "./Weather";
 import {styled,keyframes} from "styled-components";
 import my from "../assets/images/myPic.gif";
 import "./Card.css"
@@ -15,16 +16,7 @@ const Circle = styled.div`
        display: none;
     }
 `
-const ClickTextAni = keyframes`
-    0%{
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-`
+
 const ClickTextDiv = styled.div`
     text-align: center;
     background-color: #fff;
@@ -44,14 +36,17 @@ const ClickTextDiv = styled.div`
     }
 `
 
+
 function Card({x,y} : {x:number; y:number}){
+
+
     const [isClick,setIsClick] = useState(false);
     const Click = () =>{
         setIsClick(!isClick)
     }
-    return(
 
-        <div className="card-wrap" onClick={Click}>
+    return(
+        <div className="card-wrap" onClick={Click}> 
         <div className={`card`} >
             <div className="Pic-wrap">
                 <img src={my} alt="my" className="img-fluid" />
@@ -67,7 +62,9 @@ function Card({x,y} : {x:number; y:number}){
                 </p>    
             </div>
            <Desktop>
-                <Circle style={{left: `${(x)/(-35)}px`, top: `${(y)/(-35)}px`}} />
+                <Circle style={{left: `${(x)/(-35)}px`, top: `${(y)/(-35)}px`}}>
+                    <Weather />
+                </Circle>
            </Desktop>
         </div> 
             <Mobile>
