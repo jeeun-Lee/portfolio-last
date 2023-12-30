@@ -22,10 +22,6 @@ function Home() {
     const mq = window.matchMedia("(max-width:1400px)");
     const mq_min = window.matchMedia("(min-width:1400px)");
     
-    const [xy,setXY]=useState({x:200,y:200});
-    const mouseMove = (event : React.MouseEvent) =>{
-        setXY({x: event.pageX, y : event.pageY})
-    };
 
     const El_skill = document.getElementById("skill_position");
     const El_skill_top = El_skill?.offsetTop;
@@ -121,9 +117,9 @@ function Home() {
         };
     },  [projectHeight, El_skill_top]);
     return (
-        <div onMouseMove={mouseMove}>
+        <div>
              <Header />
-            <Card x= {xy.x} y = {xy.y}  />
+            <Card />
             <section className="home">
                 <div className="wrap-1400">
                     <h1 className="hi en">Hello</h1>

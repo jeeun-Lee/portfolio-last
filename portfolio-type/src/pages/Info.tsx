@@ -10,10 +10,8 @@ const Title = styled.div`
     }
 
 `
-
 const Div_text = styled.div`
     display: flex;
-
     width: fit-content;
     margin: 0 auto;
     margin-top: 20px;
