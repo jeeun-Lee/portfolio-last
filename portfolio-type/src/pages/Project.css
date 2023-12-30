@@ -24,7 +24,7 @@
     display: block;
     max-width: 100%;
     height: auto;
-  
+    
 }
 #project .swiper_btn_wrap{
     position: absolute;
@@ -99,8 +99,25 @@
       opacity: 1;
     }
   }
+  @media(max-width:1400px){
+
+    #project .img-wrap{
+        max-width: none;
+    }
+    #project .img-wrap img{
+        width: 100%;
+    }
+
+  }
   @media(max-width:768px){
+    :root{
+        --swiper-navigation-size: 27px;
+    }
     #project .txt-wrap{
         min-height: 274px;
+    }
+    #project .swiper_btn_wrap{
+        width: 68px;
+        right: 20px;
     }
   }

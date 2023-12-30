@@ -52,7 +52,7 @@ function Project() {
                     dynamicBullets: true
                   }}
                 breakpoints={{
-                    1210: {
+                    1400: {
                         slidesPerView :3.0
                     },
                     768: {
