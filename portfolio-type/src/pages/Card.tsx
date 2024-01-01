@@ -67,7 +67,7 @@ const ClickTextDiv = styled.div`
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        width: 70px;
+        width: 55px;
     }
 `
 
