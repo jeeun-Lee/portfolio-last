@@ -73,7 +73,7 @@ function Project() {
                             <h4 className="project_title">{item.project_title}</h4>
                             <div className="d-flex">    
                                 <p className="txt_type">{item.type}</p>
-                                <p className="txt_percent">참여도 {item.percent}</p>
+                                <p className="txt_percent">참여도<span>(프론트앤드/퍼블리싱)</span> {item.percent}</p>
                             </div>
 
                             <p className="txt_detail">{item.detail}</p>

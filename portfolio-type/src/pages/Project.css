@@ -69,11 +69,17 @@
 #project .txt-wrap .project_title{
     font-size: 22px;
     color: #808d2a;
+
 }
 #project .txt-wrap .txt_type,#project .txt-wrap .txt_percent{
-    font-size: 16px;
+    font-size: 15px;
     color: #7c7c7c;
     margin: 5px 0;
+    text-align: right;
+}
+#project .txt-wrap .txt_percent span{
+    font-size: 13px;
+    color: #7c7c7c;
 }
 #project .txt-wrap .txt_detail{
     font-size: 18px;
