@@ -15,6 +15,7 @@ interface Projectprops {
     project_title : string,
     type : string,
     detail : string,
+    percent : string,
     tag : string[],
     url : string
 }
@@ -70,7 +71,11 @@ function Project() {
                         </div>
                         <div className="txt-wrap">
                             <h4 className="project_title">{item.project_title}</h4>
-                            <p className="txt_type">{item.type}</p>
+                            <div className="d-flex">    
+                                <p className="txt_type">{item.type}</p>
+                                <p className="txt_percent">참여도 {item.percent}</p>
+                            </div>
+
                             <p className="txt_detail">{item.detail}</p>
                             <p className="txt_tags">{item.tag.map((tags,index)=>(<span className="en" key={index}>{tags} </span>))}</p>
                         </div>
