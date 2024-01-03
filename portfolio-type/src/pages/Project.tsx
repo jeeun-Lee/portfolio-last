@@ -24,17 +24,16 @@ const Project_title = styled.h1`
     margin-bottom: 50px;
 `
 function Project() {
-    const [project,setProject]= useState<Projectprops[]>()
-    useEffect(() => {
+    const [project,setProject]= useState<Projectprops[]>();
 
+    useEffect(() => {
        setProject(projectData)
        
     },[])
 
     return(
         <section id="project">
-           
-        <div className="wrap-1400" style={{position:"relative"}}>
+        <div className="wrap-1400">
             <Project_title className="en">Project</Project_title>
         
             <Swiper

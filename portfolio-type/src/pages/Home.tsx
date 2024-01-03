@@ -1,5 +1,4 @@
 
-import {styled,keyframes} from "styled-components";
 import {gsap} from "gsap";
 import Header from "../components/Header";
 import { ScrollTrigger } from "gsap/all";
@@ -8,10 +7,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import "./Home.css";
-import { Default, Desktop, Mobile, Tablet } from "../media";
 import Skill from "./Skill";
 import Card from "./Card";
 import Project from "./Project";
+// import Project2 from "./Project2";
 import Info from './Info';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -20,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 function Home() {
     
     const mq = window.matchMedia("(max-width:1400px)");
-    const mq_min = window.matchMedia("(min-width:1400px)");
+  //  const mq_min = window.matchMedia("(min-width:1400px)");
     
 
     const El_skill = document.getElementById("skill_position");
@@ -35,7 +34,7 @@ function Home() {
         const El_top = El?.offsetTop;
         setProjectHeight(El_top)
 
-        if(mq.matches || !(mq_min.matches)){
+        if(mq.matches){
             gsap.to(".card-wrap",{
                 duration: 0.1,
                 display:"none",
