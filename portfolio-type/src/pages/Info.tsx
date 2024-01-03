@@ -1,6 +1,11 @@
 import { useEffect, useRef } from "react";
 import {styled} from "styled-components";
 
+const Bg = styled.div`
+    background-color:#BCD041;
+    padding:250px 0;
+`
+
 const Title = styled.div`
     width: 100%;
     font-size: 50px;
@@ -39,27 +44,26 @@ function Info() {
     },[])
 
     return(
-        <section className="info" style={{
-            backgroundColor:"#BCD041",padding:"250px 0"
-        }}>
-            <div className="wrap-1400" style={{position: `relative`}} >
-            <Title>
-                <h1 className="info-title en">
-               <span className="inText">Thank you</span>  <br />
-                For <span className="inText swing">Watching!</span>
-                </h1>
-            <Div_text>
-                <a href="https://github.com/jeeun-Lee" target="_blank">
-                    <img src={process.env.PUBLIC_URL + `/images/github.png`} alt="" />
-                </a>
-                <a href="mailto:batch402@gmail.com" target="_blank">
-                    <img src={process.env.PUBLIC_URL + `/images/email.png`} alt="" />
-                </a>
-            </Div_text>
-            
-            </Title>
-           
-        </div>
+        <section className="info">
+            <Bg>
+                <div className="wrap-1400" >
+                <Title>
+                    <h1 className="info-title en">
+                <span className="inText">Thank you</span>  <br />
+                    For <span className="inText swing">Watching!</span>
+                    </h1>
+                <Div_text>
+                    <a href="https://github.com/jeeun-Lee" target="_blank">
+                        <img src={process.env.PUBLIC_URL + `/images/github.png`} alt="" />
+                    </a>
+                    <a href="mailto:batch402@gmail.com" target="_blank">
+                        <img src={process.env.PUBLIC_URL + `/images/email.png`} alt="" />
+                    </a>
+                </Div_text>
+                
+                </Title>
+                </div>
+        </Bg>
         </section>
         
     )

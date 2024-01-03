@@ -3,8 +3,6 @@ import NotFound from '../pages/NotFound';
 import App from '../App';
 import Home from '../pages/Home';
 import ErrorComponents from '../components/ErrorComponents';
-
-
 const router = createBrowserRouter([
     {
         path :"/portfolio-last",
