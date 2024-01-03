@@ -9,8 +9,8 @@ import "aos/dist/aos.css";
 import "./Home.css";
 import Skill from "./Skill";
 import Card from "./Card";
-import Project from "./Project";
-// import Project2 from "./Project2";
+// import Project from "./Project";
+import Project2 from "./Project2";
 import Info from './Info';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -126,7 +126,7 @@ function Home() {
                 </div>
             </section>
            <Skill />
-            <Project />
+            <Project2 />
             <Info  /> 
         </div>
        
