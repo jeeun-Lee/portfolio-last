@@ -28,7 +28,6 @@ const Div_text = styled.div`
 
 const SideBar_box = styled.div`
        position: fixed;
-       overflow-x: hidden;
        top: 50%;
        left: 5%;
        transform: translateY(-50%);
