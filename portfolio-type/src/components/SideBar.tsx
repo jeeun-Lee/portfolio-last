@@ -120,7 +120,7 @@ function SideBar({element} : any): JSX.Element {
        <>
               
           <SideBar_box className="sideBar">
-            <Weather />
+         {/* <Weather /> */}   
             <Tablet>
               <Menu id="memu" onClick={toggleSide} >
                 <span></span>
