@@ -1,6 +1,6 @@
 #project{
     padding-bottom: 100px;
-    background-color: #fff;
+    background-color: #FFFAEC;
     position: relative;
     z-index: 999;
 
@@ -81,7 +81,7 @@
 }
 #project .txt-wrap .project_title{
     font-size: 22px;
-    color: #808d2a;
+    color: #95CE9E;
 
 }
 #project .txt-wrap .txt_type,#project .txt-wrap .txt_percent{
@@ -95,19 +95,27 @@
     color: #7c7c7c;
 }
 #project .txt-wrap .txt_detail{
-    font-size: 18px;
+    padding: 10px 0;
     word-break: keep-all;
+    text-indent: -1.5px;
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
 }
-
+#project .txt-wrap .txt_tags{
+    min-height: 66px;
+}
 #project .txt-wrap .txt_tags span{
     color: #fff;
-    background-color: #7c7c7c;
+    background-color: #595959;
     border-radius: 20px;
     display: inline-block;
     padding: 3px 10px;
     
     font-size: 14px;
     margin-top: 10px;
+}
+#project .txt-wrap .txt_tags span:nth-child(2n){
+    background-color: #95CE9E
 }
 #project .txt-wrap .txt_tags span:not(:last-child){
     margin-right: 5px;
