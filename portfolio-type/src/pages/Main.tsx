@@ -7,6 +7,7 @@ const CircleBg = styled.div`
     width: 100%;
     max-width: 1400px;
     height:800px;
+    overflow-x: hidden;
     background-color: #95CE9E;
     border-radius: 555px;
     position: absolute;

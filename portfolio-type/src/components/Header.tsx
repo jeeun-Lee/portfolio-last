@@ -10,7 +10,7 @@ const Header_box = styled.div`
         left: 0;
         width: 100%;
         opacity: 1;
-        
+        overflow-x: hidden;
         z-index: 99999;
         visibility: visible;
         &.hidden{
