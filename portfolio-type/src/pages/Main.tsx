@@ -64,10 +64,10 @@ function Main({el1} : any){
         <section id="Main"  ref={el1}>
                 <div className={`Title_wrap ${isZoom ? '' : 'scroll'}`}>
                     <h1 className=" noinfo">
-                        Welcome <br />
-                        Je Protfolio!
+                       
+                        Je Protfolio
                         <span>
-                        변화무쌍 IT 산업에 <br />  주도적으로 대응하는  성장형 프론트 엔드 개발자
+                        변화무쌍 IT 산업에  주도적으로 대응하는 <br />  성장형 프론트 엔드 개발자
                         </span>
                   
                     </h1>

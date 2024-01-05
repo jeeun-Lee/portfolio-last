@@ -28,6 +28,7 @@
 .Title_wrap h1.noinfo{
     font-size: 72px;
     line-height: 1;
+    text-transform: uppercase;
 }
 .Title_wrap h1 span{
     font-size: 48px;
@@ -119,6 +120,14 @@
         transform: translateY(0%);
     }
 }
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .img_wrap{
     position: relative;
     z-index: 10;
@@ -134,7 +143,9 @@
     top: 60%;
     right: 50px;
     transform: translateX(0) translateY(-50%);
+    animation: opacity 2s  both;
 }
+
 @media(max-width:1400px){
 
     .Title_wrap{
@@ -158,6 +169,8 @@
 @media (max-width: 768px){
     .Title_wrap h1.noinfo {
         font-size: 48px;
+        
+        
     }
     .Title_wrap h1.noinfo span {
         font-size: 16px;
