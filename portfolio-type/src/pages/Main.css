@@ -12,22 +12,32 @@
 }
 .Title_wrap {
     position: fixed;
-    top: 8%;
+    top: 33%;
     right: 50%;
-    transform: translateX(50%);
+    transform: translateX(50%) translateY(-50%);
     z-index: 99;
     transition:.3s
 }
 
 .Title_wrap h1, .Title_wrap h1 span{
-    font-size: 54px;
+    font-size: 64px;
     font-weight: 600;
    line-height: 1.2;
+   text-align: center;
+}
+.Title_wrap h1.noinfo{
+    font-size: 72px;
+    line-height: 1;
 }
 .Title_wrap h1 span{
     font-size: 48px;
     display: block;
     color: #fff;
+}
+.Title_wrap h1.noinfo span{
+    font-size: 28px;
+    color: #111;
+    padding-top: 15px;
 }
 .Title_wrap .infoTxt{
     display: none;
@@ -123,17 +133,13 @@
 .Title_wrap.scroll{
     top: 60%;
     right: 50px;
-    transform:translateY(-50%)
+    transform: translateX(0) translateY(-50%);
 }
 @media(max-width:1400px){
 
-    .Title_wrap {
-        top: 50px;
-        right:50%;
-        width: max-content;
-        z-index: 99;
-        transition: .3s;
-        transform: translateX(50%);
+    .Title_wrap{
+        top: 25%;
+        width: 100%;
     }
     .Title_wrap h1, .Title_wrap h1 span{
         font-size: 48px;
@@ -150,8 +156,11 @@
     
 }
 @media (max-width: 768px){
-    .Title_wrap{
-        top: 114px;
+    .Title_wrap h1.noinfo {
+        font-size: 48px;
+    }
+    .Title_wrap h1.noinfo span {
+        font-size: 16px;
     }
     .txt_wrap{
         display: none;
