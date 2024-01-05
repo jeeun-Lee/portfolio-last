@@ -2,10 +2,9 @@ import  { useEffect, useRef, useState } from "react";
 import projectData from "../assets/ProjectDb";
 import {styled,keyframes} from "styled-components";
 import { Link, useParams } from "react-router-dom";
-import { Default, Desktop, Mobile, Tablet } from "../media";
 
-import "aos/dist/aos.css";
 import "./Project2.css";
+
 
 interface Projectprops {
     id : number,
@@ -30,10 +29,12 @@ const Project_title = styled.h1`
 
 
 
-function Project2() {
+function Project2({el3} : any) {
     const [project, setProject] = useState<Projectprops[]>([]);
+
     const mq = window.matchMedia("(max-width:1400px)");
     const mq_mobile = window.matchMedia("(max-width:768px)");
+
     const reSize = () =>{
         const slideDivs = document.getElementsByClassName('slide');
         const slideArray = Array.from(slideDivs);
@@ -62,8 +63,7 @@ function Project2() {
         });
 
     }
- 
-
+    
   useEffect(() => {
     setProject(projectData);
   }, []);
@@ -81,10 +81,10 @@ function Project2() {
     
     }
   });
-  
+
+
     return(
-        
-        <section id="project">
+        <section id="project" data-aos="fade-up" data-aos-offset="500" className="TopLink" data-link="2" ref={el3}>
           
         <div className="wrap-1400">
             <Project_title className="en">Project <span>* 최근 순으로 배치되었습니다</span> </Project_title>
