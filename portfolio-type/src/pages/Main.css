@@ -12,14 +12,15 @@
 }
 .Title_wrap {
     position: fixed;
-    top: 50px;
-    right: 458px;
+    top: 8%;
+    right: 50%;
+    transform: translateX(50%);
     z-index: 99;
     transition:.3s
 }
 
 .Title_wrap h1, .Title_wrap h1 span{
-    font-size:64px;
+    font-size: 48px;;
     font-weight: 600;
    line-height: 1.2;
 }
