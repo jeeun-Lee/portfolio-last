@@ -55,7 +55,7 @@
     padding: 15px 30px;
     border-radius: 30px;
     animation: fade-up .7s .5s both, slow 1s  infinite alternate;
-    z-index: 15;
+    z-index: 100;
     transition: .3s;
 }
 

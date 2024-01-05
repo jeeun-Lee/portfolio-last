@@ -67,8 +67,8 @@ function Main({el1} : any){
                         Welcome! <br />
                         JeEun Portfolio
                         <span>
-                            꾸준하게 성장하는 <br />
-                            프론트엔드 개발자입니다.
+                            꾸준히 성장 중인 <br />
+                            나는야! 프론트엔드 개발자!
                         </span>
                     </h1>
                     <h1 className="en infoTxt">
