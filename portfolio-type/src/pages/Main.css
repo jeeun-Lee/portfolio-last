@@ -1,6 +1,7 @@
 #Main{
     height: 100vh;
     background-color: #FFFAEC;
+    overflow-x: hidden;
 }
 .circle{
     background-color: #fff;
