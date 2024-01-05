@@ -169,7 +169,7 @@
 }
 @media (max-width: 768px){
     #Main{
-        height: calc(100vh - 50px);
+        height: calc(var(--vh, 1vh) * 100);
     }
     .Title_wrap h1.noinfo {
         font-size: 48px;
