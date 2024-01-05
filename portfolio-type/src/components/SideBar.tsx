@@ -21,7 +21,8 @@ const Div_text = styled.div`
     }
     @media(max-width:1400px){
       left: 0;
-    top: 0;
+      top: 0;
+      margin: 0 auto;
     }
 `
 
