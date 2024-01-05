@@ -87,7 +87,7 @@ function Project2({el3} : any) {
         <section id="project" data-aos="fade-up" data-aos-offset="500" className="TopLink" data-link="2" ref={el3}>
           
         <div className="wrap-1400">
-            <Project_title className="en">Project <span>* 최근 순으로 배치되었습니다</span> </Project_title>
+            <Project_title className="en">Project </Project_title>
                 <ul className="d-flex">
                    
                     {project?.map((item)=>(
@@ -105,8 +105,8 @@ function Project2({el3} : any) {
                                     <p className="txt_percent">참여도<span>(프론트앤드/퍼블리싱)</span> {item.percent}</p>
                                 </div>
 
-                                <p className="txt_detail">{item.detail}</p>
                                 <p className="txt_tags">{item.tag.map((tags,index)=>(<span className="en" key={index}>{tags} </span>))}</p>
+                                <p className="txt_detail">{item.detail}</p>
                             </div>
                             </Link>
                             </li>
