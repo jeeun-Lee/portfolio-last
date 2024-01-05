@@ -25,7 +25,7 @@ const CircleBg = styled.div`
         border-radius: 555px 555px 0 0;
     }
     @media(max-width:768px){
-        height: 700px;
+        height: 565px;
     }
 `
 const InfoT = styled.div`
@@ -64,7 +64,12 @@ function Main({el1} : any){
         <section id="Main"  ref={el1}>
                 <div className={`Title_wrap ${isZoom ? '' : 'scroll'}`}>
                     <h1 className=" noinfo">
-                    변화무쌍 IT 산업에 <br />  주도적으로 대응하는 <br />   성장형 프론트 엔드 개발자
+                        Welcome <br />
+                        Je Protfolio!
+                        <span>
+                        변화무쌍 IT 산업에 <br />  주도적으로 대응하는  성장형 프론트 엔드 개발자
+                        </span>
+                  
                     </h1>
                     <h1 className="en infoTxt">
                        Thank you for Watching!
