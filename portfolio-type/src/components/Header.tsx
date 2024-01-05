@@ -2,14 +2,15 @@ import { useEffect, useState } from "react";
 import {styled} from "styled-components";
 
 const Header_box = styled.div`
-        font-size: 18px;
+        font-size: 13px;
+        color: #aaa;
         padding: 10px;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         opacity: 1;
-        background-color: #fff;
+        
         z-index: 99999;
         visibility: visible;
         &.hidden{
@@ -17,9 +18,7 @@ const Header_box = styled.div`
             opacity: 0;
             visibility: hidden;
         }
-        @media (max-width:768px) {
-            font-size: 14px;
-        }
+
     `
 function Header(): JSX.Element {
 

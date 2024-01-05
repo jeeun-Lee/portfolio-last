@@ -13,11 +13,6 @@ const router = createBrowserRouter([
                 path : "",
                 element : <Home />,
                 errorElement : <ErrorComponents />
-            },
-            {
-                path : "projects",
-                element : <Project2 />,
-                errorElement : <ErrorComponents />
             }
         ],
         errorElement : <NotFound />

@@ -1,18 +1,9 @@
-.Skill{
-    position: relative;
-    top: 0;
-    animation: slowDown 1s 0.6s both;
-}
-@keyframes slowDown{
-    0%{
-        top: -140px;
-    }
-    100%{
-        top: 0;
-    }
+
+#Skill{
+    background-color:#95CE9E;
 }
 .Skill-wrap{
-    background-color: #ddd;
+    padding: 100px 0;
 }
 .Skill-wrap h1{
     font-size: 70px;
@@ -32,12 +23,14 @@
 .skill-list h6 + ul>li{
     margin:0 10px;
     font-size: 18px;
-    color: #aaa;
+    color: #fff;
 }
 .skill-list h6 + ul>li.check{
     font-weight: bold;
     color: #111;
 }
+
+
 .skill-list>li:not(:last-child){
     margin-bottom: 50px;
 }
@@ -46,7 +39,7 @@
     margin-left: 20px;
     font-size: 18px;
 }
-@media(max-width:758px){
+@media(max-width:1400px){
     @keyframes slowDown{
         0%{
             top: -90px;
@@ -58,11 +51,11 @@
     .Skill-wrap h1{
         font-size:10vw;
     }
-    .skill-list div.flex{
+    .skill-list div.d-flex{
         flex-direction: column;
         align-items: flex-start;
     }
-    .skill-list ul.flex{
+    .skill-list ul.d-flex{
         padding: 10px 0;
     }
     .skill-list p{

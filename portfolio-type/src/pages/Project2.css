@@ -1,9 +1,14 @@
 #project{
     padding-bottom: 100px;
+    background-color: #fff;
+    position: relative;
+    z-index: 999;
+
 }
 #project .wrap-1400{
     position: relative;
     overflow: hidden;
+    padding: 100px 0;
 }
 #project .d-flex{
     display: flex;
@@ -118,13 +123,18 @@
         width: 100%;
     }
     #project .slide {
-        max-width: calc(50% - 20px);
+        max-width: calc(50% - 10px);
         margin-right: 20px;
       
     }
-    #project .slide:nth-child(3n) {
-        margin-right: 20px
+    #project .slide:nth-child(3n){
+        margin-right: 20px;
     }
+    #project .slide:nth-child(2n) {
+        margin-right: 0;
+    }
+
+
   }
   @media(max-width:768px){
     :root{

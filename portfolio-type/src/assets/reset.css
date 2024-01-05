@@ -24,6 +24,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+.img-fluid-block{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 ul {
     list-style: none;
 }
@@ -49,5 +54,23 @@ a:hover {
     color: inherit;
 }
 
-
+.d-flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+.wrap-1400{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+@media(max-width:1400px){
+  section{
+    padding: 0 20px;
+  }
+}
 /* 초기 설정 */

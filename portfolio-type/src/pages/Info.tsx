@@ -1,9 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import {styled} from "styled-components";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 
+
+gsap.registerPlugin(ScrollTrigger);
 const Bg = styled.div`
-    background-color:#BCD041;
-    padding:250px 0;
+    background-color:#95CE9E;
+    height: 100vh;
 `
 
 const Title = styled.div`
@@ -15,25 +19,21 @@ const Title = styled.div`
     }
 
 `
-const Div_text = styled.div`
-    display: flex;
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 20px;
-    & a{
-        display: block;
-        width: 25px;
-        margin: 0 5px;
-    }
-    & a img{
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
-`
 
-function Info() {
+function Info({el4} : any) {
+    const handleScroll = () => {
+        const Title = document.querySelector(".Title_wrap");
+        const InfoC = el4.current;
+       if(InfoC){
+           if(InfoC.className.includes("aos-animate")){
+                Title?.classList.add("style")
+           }else{
+            Title?.classList.remove("style")
+           }
+       }
+    };
     useEffect(()=>{
+      
         const inText = document.querySelectorAll(".inText")  as NodeListOf<HTMLSpanElement>;
         inText.forEach((inText)=> {
             const ThisText = inText.innerText as string | null;
@@ -43,25 +43,21 @@ function Info() {
         })
     },[])
 
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener("resize", handleScroll)
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.addEventListener("resize", handleScroll)
+      };
+      
+    }, []);
+
     return(
-        <section className="info">
+        <section id="Info" data-aos="fade-up" data-aos-offset="0" className="TopLink" ref={el4} style={{backgroundColor: "#95CE9E"}}>
             <Bg>
                 <div className="wrap-1400" >
-                <Title>
-                    <h1 className="info-title en">
-                <span className="inText">Thank you</span>  <br />
-                    For <span className="inText swing">Watching!</span>
-                    </h1>
-                <Div_text>
-                    <a href="https://github.com/jeeun-Lee" target="_blank">
-                        <img src={process.env.PUBLIC_URL + `/images/github.png`} alt="" />
-                    </a>
-                    <a href="mailto:batch402@gmail.com" target="_blank">
-                        <img src={process.env.PUBLIC_URL + `/images/email.png`} alt="" />
-                    </a>
-                </Div_text>
-                
-                </Title>
+
                 </div>
         </Bg>
         </section>

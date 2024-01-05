@@ -1,14 +1,23 @@
 import { useEffect, useState } from "react";
 import {styled,keyframes} from "styled-components";
 import { Default, Desktop, Mobile, Tablet } from "../media";
+
 const WeatherBox = styled.div`
     width: 150px;
-    height: 100%;
-    position: absolute;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    left: -30px;
     text-align: center;
     padding-top: 35px;
+    animation: shake-horizontal 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
     & p{
         margin-top: 0;
+        text-align: center;
+    }
+    & .d-flex{
+        justify-content: center;
     }
     & .d-flex img{
        position: absolute;
@@ -16,7 +25,42 @@ const WeatherBox = styled.div`
        bottom:-10px;
        transform: translateX(-50%);
     }
-`
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border:1px solid #95CE9E;
+       
+    }
+
+    @keyframes shake-horizontal {
+        0%,
+        100% {
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+        }
+        50% {
+            -webkit-transform: translateX(-15px);
+                    transform: translateX(-15px);
+        }
+        }
+        @media (max-width:1400px) {
+            left: 0px;
+            width: 60px;
+            height: 60px;
+            padding-top: 0;
+            margin-left: auto;
+            & img{
+                width: 60px;
+            }
+            
+        }
+
+    `
 interface WeatherResponse {
     weather: {
         id: number;
@@ -61,13 +105,13 @@ function Weather(){
 
     },[])
     return (
-        <div>
+        <WeatherBox>
         {loading ? (
             <p>Loading</p>
         ) : (
             <>
             <Desktop>
-                <WeatherBox>
+                <div>
                     {Array.isArray(WeatherD) && WeatherD.length > 0 ? (
                         WeatherD.map((item) => 
                         (
@@ -85,14 +129,14 @@ function Weather(){
                     ) : (
                         <p>No weather data available</p>
                     )}
-                </WeatherBox>
+                </div>
             </Desktop>
-            <Mobile>
+            <Tablet>
                 <div>
                         {Array.isArray(WeatherD) && WeatherD.length > 0 ? (
                             WeatherD.map((item) => 
                             (
-                                <ul key={item.weather[0].id}>
+                                <ul className="mobile" key={item.weather[0].id}>
                                         <li>
                                             <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt={item.weather[0].main} />
                                         </li>
@@ -103,10 +147,10 @@ function Weather(){
                             <p>No weather data available</p>
                         )}
                     </div>
-            </Mobile>
+            </Tablet>
             </>
         )}
-    </div>
+    </WeatherBox>
     );
 }
 export default Weather;
