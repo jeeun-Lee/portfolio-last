@@ -13,7 +13,7 @@
 .Title_wrap {
     position: fixed;
     top: 50px;
-    right: 400px;
+    right: 458px;
     z-index: 99;
     transition:.3s
 }
@@ -24,6 +24,7 @@
    line-height: 1.2;
 }
 .Title_wrap h1 span{
+    font-size: 48px;
     display: block;
     color: #fff;
 }
