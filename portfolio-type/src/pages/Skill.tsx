@@ -29,7 +29,7 @@ function Skill({el2} : any){
      },[]); 
 
     return( 
-        <section id="Skill" data-aos="fade-up"  data-aos-offset="500" className="TopLink" data-link="1" ref={el2}> 
+        <section id="Skill" ref={el2}> 
         <Link to="" id="SkillL"> </Link>
             <div className="Skill-wrap">
                 <div className="wrap-1400" id="skill_position">

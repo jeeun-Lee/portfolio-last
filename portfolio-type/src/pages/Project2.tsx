@@ -84,7 +84,7 @@ function Project2({el3} : any) {
 
 
     return(
-        <section id="project" data-aos="fade-up" data-aos-offset="500" className="TopLink" data-link="2" ref={el3}>
+        <section id="project"  ref={el3}>
           
         <div className="wrap-1400">
             <Project_title className="en">Project </Project_title>

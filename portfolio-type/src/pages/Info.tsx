@@ -32,16 +32,16 @@ function Info({el4} : any) {
            }
        }
     };
-    useEffect(()=>{
+    // useEffect(()=>{
       
-        const inText = document.querySelectorAll(".inText")  as NodeListOf<HTMLSpanElement>;
-        inText.forEach((inText)=> {
-            const ThisText = inText.innerText as string | null;
-            if (ThisText) {
-                inText.setAttribute('data-text', ThisText);
-            }
-        })
-    },[])
+    //     const inText = document.querySelectorAll(".inText")  as NodeListOf<HTMLSpanElement>; //해당 클래스 초기화
+    //     inText.forEach((inText)=> {
+    //         const ThisText = inText.innerText as string | null; 클래스 내의 텍스트 저장
+    //         if (ThisText) {
+    //             inText.setAttribute('data-text', ThisText); 속성값에 추출한 텍스트 저장
+    //         }
+    //     })
+    // },[])
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -54,7 +54,8 @@ function Info({el4} : any) {
     }, []);
 
     return(
-        <section id="Info" data-aos="fade-up" data-aos-offset="0" className="TopLink" ref={el4} style={{backgroundColor: "#95CE9E"}}>
+        <section id="Info" ref={el4} data-aos="fade-up" className="TopLink" style={{backgroundColor: "#95CE9E"}}> 
+        
             <Bg>
                 <div className="wrap-1400" >
 

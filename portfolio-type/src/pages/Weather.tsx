@@ -70,50 +70,52 @@ interface WeatherResponse {
 
 }
 function Weather(){
-    const [loading, setLoading]  = useState(true);
-    const [WeatherD,setWeatherD] = useState<WeatherResponse[]>([]);
-    const date = new Date();
+    const [loading, setLoading]  = useState(true); //데이터 로딩
+    const [WeatherD,setWeatherD] = useState<WeatherResponse[]>([]); //날씨 API 받아올 곳 : WeatherResponse로 타입 지정
+    const date = new Date(); //날짜
 
-    const month = date.getMonth()+1;
-    const day = date.getDate();
+    const month = date.getMonth()+1; //날짜 : 월
+    const day = date.getDate(); //날짜 : 일
 
 
     const WeatherErr = () =>{
-        alert("Not found")
+        alert("Not found") //데이터 허용 x 시 알림
     }
 
     
     const weatherData = async (lat: number, lng: number) =>{
 
-            const WEATHER_KEY =process.env.REACT_APP_WEATHER_KEY;
-            const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${WEATHER_KEY}&units=metric`;
-            const response = await fetch(weather_url);
-            const json = await response.json();
-            setWeatherD([json]);
-            setLoading(false)
+            const WEATHER_KEY =process.env.REACT_APP_WEATHER_KEY; //키 초기화
+            const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${WEATHER_KEY}&units=metric`; //키
+            const response = await fetch(weather_url); //키 호출
+            const json = await response.json(); //키 Json 형식으로 변환
+            setWeatherD([json]); // WeatherD에 [json] 저장
+            setLoading(false) //로딩 비활성화
 
     }
    
 
     
     useEffect(()=>{
-        navigator.geolocation.getCurrentPosition((position) => {
-            const lat = position.coords.latitude;
-            const lng = position.coords.longitude;
-            weatherData(lat, lng);
+        navigator.geolocation.getCurrentPosition((position) => { //경도 위도
+            const lat = position.coords.latitude; //경도
+            const lng = position.coords.longitude; //위도
+            weatherData(lat, lng); //데이터 API 키 호출 함수에 전달
+
           },WeatherErr);
 
     },[])
     return (
         <WeatherBox>
-        {loading ? (
+        {loading ? ( // 로딩 시 텍스트 출력 후 로딩 완료 후 데이터 출력
             <p>Loading</p>
         ) : (
             <>
-            <Desktop>
+            {/* PC버전 */}
+            <Desktop> 
                 <div>
-                    {Array.isArray(WeatherD) && WeatherD.length > 0 ? (
-                        WeatherD.map((item) => 
+                    {Array.isArray(WeatherD) && WeatherD.length > 0 ? ( //데이터가 배열상태이고 빈값이 아닐 시 
+                        WeatherD.map((item) =>  //맵핑으로 데이터 출력 
                         (
                             <ul key={item.weather[0].id}>
                                     <li> <p className="en">Today {`${month} / ${day}`}</p></li>
@@ -131,6 +133,7 @@ function Weather(){
                     )}
                 </div>
             </Desktop>
+            {/* Tablet, Mobile버전 */}
             <Tablet>
                 <div>
                         {Array.isArray(WeatherD) && WeatherD.length > 0 ? (
