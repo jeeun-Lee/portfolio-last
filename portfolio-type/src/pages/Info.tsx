@@ -3,7 +3,6 @@ import {styled} from "styled-components";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 
-
 gsap.registerPlugin(ScrollTrigger);
 const Bg = styled.div`
     background-color:#95CE9E;
@@ -42,19 +41,20 @@ function Info({el4} : any) {
     //         }
     //     })
     // },[])
-
+    handleScroll();
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        window.addEventListener("resize", handleScroll)
+        window.addEventListener("resize", handleScroll);
       return () => {
         window.removeEventListener('scroll', handleScroll);
-        window.addEventListener("resize", handleScroll)
+        window.removeEventListener("resize", handleScroll);
       };
       
-    }, []);
+    },);
 
+  
     return(
-        <section id="Info" ref={el4} data-aos="fade-up" className="TopLink" style={{backgroundColor: "#95CE9E"}}> 
+        <section id="Info" ref={el4} data-aos="fade-up" className="TopLink"  data-aos-duration="0" style={{backgroundColor: "#95CE9E"}} > 
         
             <Bg>
                 <div className="wrap-1400" >

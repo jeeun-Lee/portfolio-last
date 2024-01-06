@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 import Header from "../components/Header";
 import Main from "./Main";
 import Skill from "./Skill";
@@ -21,10 +22,11 @@ function Home() {
     const el3 = useNavScroll();
     const el4 = useNavScroll();
     const element = [el1,el2,el3,el4];
-  useEffect(() => {
-    AOS.init();
-   
-    }, );
+    
+    useEffect(() => {
+        AOS.init();
+       
+        }, );
     return (
         <>
             <Header></Header>
