@@ -13,6 +13,7 @@ import SideBar from '../components/SideBar';
 import "../assets/noAos.css";
 
 import useNavScroll from "../nav";
+import About from "./About";
 
 function Home() {
     const el1 = useNavScroll();
@@ -29,6 +30,7 @@ function Home() {
             <Header></Header>
             <SideBar element={element}></SideBar>
             <Main el1 ={el1.element}></Main>
+            <About></About>
             <Skill el2 ={el2.element}></Skill>
             <Project el3 ={el3.element}></Project>
             <Info el4 ={el4.element}></Info>
