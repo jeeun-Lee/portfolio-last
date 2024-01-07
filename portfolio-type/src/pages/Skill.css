@@ -24,10 +24,10 @@
 .skill-list h6 + ul>li{
     margin:0 10px;
     font-size: 18px;
-    color: #fff;
+    color: rgba(255,255,255,0.5);
 }
 .skill-list h6 + ul>li.check{
-    font-weight: bold;
+    font-weight: 700;
     color: #111;
 }
 
