@@ -3,7 +3,7 @@ export const project = [
         id: 1,
         project_title : "포트폴리오 웹사이트",
         type : "웹사이트",
-        detail : "독학으로 REACTJS + typeScript환경에서 네비게이션 클릭 이벤트, 스크롤 이벤트를 추가하고 프로젝트와 스킬 데이터를 json 형식에서 async-await 통신으로 hook사용해 맵핑으로 데이터를 출력했습니다",
+        detail : "REACTJS + typeScript환경에서 네비게이션 클릭 이벤트, 스크롤 이벤트를 추가하고 프로젝트와 스킬 데이터를 json 형식에서 async-await 통신으로 hook사용해 맵핑으로 데이터를 출력했습니다",
         percent: "100%",
         tag : ["HTML/CSS","Responsive", "REACTJS", "TypeScript","Style-components","AOS","Git","JavaScript"],
         url : "https://jeeun-lee.github.io/portfolio-last/"
