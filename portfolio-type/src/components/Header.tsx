@@ -43,7 +43,7 @@ function Header(): JSX.Element {
     return(
         <Header_box  className={`${isBoxVisible ? 'visible' : 'hidden'}`}>
             <header>
-                <p>· 크롬 브라우저로 확인하는 것을 권고드립니다.</p>
+                <p>· 크롬 브라우저로 확인하는 것을 권고드립니다.(1920X1080 표준으로 제작된 반응형 페이지입니다.)</p>
             </header>
         </Header_box>
         
