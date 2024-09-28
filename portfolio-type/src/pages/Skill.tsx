@@ -33,7 +33,7 @@ function Skill({el2} : any){
         <Link to="" id="SkillL"> </Link>
             <div className="Skill-wrap">
                 <div className="wrap-1400" id="skill_position">
-                    <h1 className="en">Skill Tool</h1>
+                    <h1 className="en">FrontEnd</h1>
 
                     <ul className="skill-list">
                     {
