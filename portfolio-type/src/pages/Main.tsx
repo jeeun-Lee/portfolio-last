@@ -73,7 +73,7 @@ function Main({el1} : any){
                        
                         Je Protfolio
                         <span>
-                        변화무쌍 IT 산업에  주도적으로 대응하는 <br />  성장형 프론트엔드 개발자
+                        변화무쌍 IT 산업에  주도적으로 대응하는 <br />  성장형 개발자
                         </span>
                   
                     </h1>

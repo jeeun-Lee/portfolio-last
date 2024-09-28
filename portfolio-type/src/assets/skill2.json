@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "skill": "JAVA",
+        "level": 80,
+        "opinion": "자료형 숙지하여 상속과 캡슐화를 인지하여 작업할 수 있습니다. "
+    }, 
+    {
+        "id": 2,
+        "skill": "Spring",
+        "level": 80,
+        "opinion": "어노테이션을 활용하여 MVC 레거시 작업을 할 수 있습니다."
+    }, 
+    {
+        "id": 3,
+        "skill": "Mybatis",
+        "level": 80,
+        "opinion": "직접 쿼리를 작업하는 작업에서 서브 쿼리 또한 작성할 수 있습니다."
+    },
+     {
+        "id": 4,
+        "skill": "Python",
+        "level": 50,
+        "opinion": "데이터를 활용하며 chart.js를 통해 그래프를 그릴 수 있습니다."
+    }, {
+        "id": 5,
+        "skill": "mysql",
+        "level": 70,
+        "opinion": "Workbench를 통해 테이블을 설계하고 쿼리를 작성 할 수 있습니다."
+    }
+]
